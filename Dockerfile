@@ -8,4 +8,4 @@ ENV INTERFACE=eth0
 # 网络流版本 支持 1 5 9 10(IPFIX) psamp
 ENV NETFLOW_VERSION=9
 
-CMD ["softflowd", "-i", "${INTERFACE}", "-n", "${TARGET}", "-v", "${NETFLOW_VERSION}" , "-D"]
+CMD ["sh", "-c", "softflowd -i ${INTERFACE} -n ${TARGET} -v ${NETFLOW_VERSION} -D"]
