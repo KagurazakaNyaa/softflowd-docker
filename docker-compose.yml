@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  softflowd:
+    build: .
+    image: kagurazakanyaa/softflowd
+    network_mode: host
+    environment:
+      - INTERFACE=eth0
+      - TARGET=127.0.0.1:2055
+      - NETFLOW_VERSION=9
